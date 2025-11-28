@@ -4,15 +4,11 @@ app = FastAPI()
  
 # "ןורכיזב "םינותנ דסמ 
 books = [
-          {"id":1,"title":"harry poter","author":""},
-          {"id":2,"title":"","author":""},
-          {"id":3,"title":"hi","author":""},
-          {"id":4,"title":"hi","author":""},
-          {"id":5,"title":"hi","author":""},
-          {"id":6,"title":"hi","author":""},
-          {"id":7,"title":"hi","author":""},
+          {"id":1,"title":"harry poter","author":" J.K. Rowling"},
+          {"id":2,"title":"gold egg","author":"alexander jack"},
+          {"id":3,"title":"reds dragons","author":"Peter Ackroyd"},
          ] 
-counter = 1 
+counter = 4
  
 @app.get("/books") 
 def get_books(): 
@@ -31,7 +27,8 @@ def add_book(book: dict):
     new_book = { 
         "id": counter, 
         "title": book.get("title"), 
-        "author": book.get("author") 
+        "author": book.get("author"),
+        "year": book.get("year")
     } 
     books.append(new_book) 
     counter += 1 
