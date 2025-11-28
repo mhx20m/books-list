@@ -4,11 +4,12 @@ app = FastAPI()
  
 # "ןורכיזב "םינותנ דסמ 
 books = [
-          {"id":1,"title":"harry poter","author":" J.K. Rowling"},
-          {"id":2,"title":"gold egg","author":"alexander jack"},
-          {"id":3,"title":"reds dragons","author":"Peter Ackroyd"},
+          {"id":1,"title":"harry poter","author":""},
+          {"id":2,"title":"","author":""},
+          {"id":3,"title":"hi","author":""},
+    
          ] 
-counter = 4
+counter = 1 
  
 @app.get("/books") 
 def get_books(): 
